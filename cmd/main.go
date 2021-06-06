@@ -66,7 +66,7 @@ func tryToGracefullyShutdown(sigCh <-chan os.Signal, app *internal.App, log logg
 	switch sig {
 	case os.Interrupt:
 		os.Exit(int(InteruptedEC))
-	case os.Interrupt:
+	case os.Kill:
 		os.Exit(int(KilledEC))
 	default:
 		os.Exit(int(UnknownSignalEC))
