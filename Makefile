@@ -1,6 +1,6 @@
-PWD = $(shell pwd)
-CMD_DIR ?= $(PWD)/cmd
-OUT_DIR ?= $(PWD)/out
+PWD = $(dir $(abspath $(lastword $(MAKEFILE_LIST)))) # has trailing / sadly ..
+CMD_DIR ?= $(PWD)cmd
+OUT_DIR ?= $(PWD)out
 BIN_NAME ?= main
 
 ## HELPERS
