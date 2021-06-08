@@ -1,4 +1,4 @@
-PWD = $(dir $(abspath $(lastword $(MAKEFILE_LIST)))) # has trailing / sadly ..
+PWD := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 CMD_DIR ?= $(PWD)cmd
 OUT_DIR ?= $(PWD)out
 BIN_NAME ?= main
